@@ -83,11 +83,11 @@ static float first_modified_Bessel( int n, float x )
 				p = p * y + d[i];
 			}
 			p = p * (float)exp(t) / (float)sqrt(t);   
-			if ( x < 0 )
-			{
-				p *= -1;
-			}
-		}    
+		} 
+		if ( x < 0 )
+		{
+			p *= -1;
+		}
 	} // n = 1
 	return p;
 }
